@@ -17,7 +17,7 @@ class MathOpeations:
                 break
             else:
                 print("Error: Invalid operation.")
-# Ask the user for two numbers
+    # Ask the user for two numbers
     def get_numbers(self):
         while True:
             try:
@@ -26,5 +26,17 @@ class MathOpeations:
                 break
             except ValueError:
                 print("Error: Invalid input. Please enter a number.")
-# Calculate the result based on the chosen operation
+    # Calculate the result based on the chosen operation
+    def calculate_result(self):
+        if self.operation == "+":
+            self.result = self.num1 + self.num2
+        elif self.operation == "-":
+            self.result = self.num1 - self.num2
+        elif self.operation == "*":
+            self.result = self.num1 * self.num2
+        elif self.operation == "/":
+            if self.num2 == 0:
+                raise ZeroDivisionError("Cannot divide by zero.")
+            else:
+                self.result = self.num1 - self.num2
 # Print the result
