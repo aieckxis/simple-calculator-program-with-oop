@@ -39,4 +39,6 @@ class MathOpeations:
                 raise ZeroDivisionError("Cannot divide by zero.")
             else:
                 self.result = self.num1 - self.num2
-# Print the result
+    # Print the result
+    def print_result(self):
+        print("Rseult:", self.result)
