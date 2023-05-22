@@ -23,6 +23,9 @@ class MathOperations:
             try:
                 self.num1 = float(input("Enter the first number: "))
                 self.num2 = float(input("Enter the second number: "))
+                if self.operation == "/" and self.num2 == "0":
+                    raise ZeroDivisionError("Error: Cannot divide by zero. Please enter a number again: ")
+                    continue
                 break
             except ValueError:
                 print("Error: Invalid input. Please enter a number.")
@@ -35,10 +38,7 @@ class MathOperations:
         elif self.operation == "*":
             self.result = self.num1 * self.num2
         elif self.operation == "/":
-            if self.num2 == 0:
-                raise ZeroDivisionError("Cannot divide by zero.")
-            else:
-                self.result = self.num1 - self.num2
+            self.result = self.num1 / self.num2
     # Print the result
     def print_result(self):
         print("Rseult:", self.result)
