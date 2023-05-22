@@ -2,7 +2,7 @@
 # BSCpE 1-4
 
 # Define Math Operations
-class MathOpeations:
+class MathOperations:
     def __init__(self):
         self.operation = ""
         self.num1 = 0
