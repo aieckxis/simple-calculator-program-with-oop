@@ -38,10 +38,10 @@ class MathOperations:
             try:
                 if self.num2 == 0:
                     raise ZeroDivisionError("Error: Cannot divide by zero.")
-                    self.result = self.num1 / self.num2
             except ZeroDivisionError as e:
                 print(f"{str(e)} Please enter a second number again: ")
                 self.num2 = float(input("Enter the second number: "))
+            self.result = self.num1 / self.num2
 
     # Print the result
     def print_result(self):
