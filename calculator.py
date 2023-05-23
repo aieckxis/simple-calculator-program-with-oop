@@ -1,4 +1,4 @@
-#Bernabe, Aleckxis Kate V.
+# Bernabe, Aleckxis Kate V.
 # BSCpE 1-4
 
 # Define Math Operations
@@ -16,15 +16,16 @@ class MathOperations:
             if self.operation in ("+", "-", "*", "/"):
                 break
             else:
-                print("Error: Invalid operation.")
+                print("\033[31mError: Invalid operation.\033[0m")
     # Ask the user for two numbers
     def get_numbers(self):
         while True:
             try:
                 self.num1 = float(input("Enter the first number: "))
                 self.num2 = float(input("Enter the second number: "))
+                break
             except ValueError:
-                print("Error: Invalid input. Please enter a number.")
+                print("\033[31mError: Invalid input. Please enter a number.\033[0m")
 
     # Calculate the result based on the chosen operation
     def calculate_result(self):
@@ -37,12 +38,12 @@ class MathOperations:
         elif self.operation == "/":
             try:
                 if self.num2 == 0:
-                    raise ZeroDivisionError("Error: Cannot divide by zero.")
+                    raise ZeroDivisionError("\033[31mError: Cannot divide by zero. \033[0m")
             except ZeroDivisionError as e:
-                print(f"{str(e)} Please enter a second number again: ")
+                print(f"{str(e)} Please enter a second number again.")
                 self.num2 = float(input("Enter the second number: "))
             self.result = self.num1 / self.num2
 
     # Print the result
     def print_result(self):
-        print("Rseult:", self.result)
+        print("Result:", self.result)
